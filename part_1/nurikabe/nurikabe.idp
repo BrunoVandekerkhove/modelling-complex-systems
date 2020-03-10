@@ -1,0 +1,33 @@
+// Name: <actual name>
+// Last name: <actual last name>
+// Student number: <actual student number>
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    land(Pos)
+    water(Pos)
+    islandSize(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    // add new vocabulary symbols here
+    // comment each symbol with intended meaning
+}
+
+theory T : V_student {
+    // to be filled in
+    // comment each rule
+}
+
+procedure main() {
+    model = onemodel(T, S1, V_fixed)
+    initVisualization()
+    visualizeNurikabe(model)
+}
+
+include "visualize_nurikabe.idp"
+include "nurikabe_structures.idp"
