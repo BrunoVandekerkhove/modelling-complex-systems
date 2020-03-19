@@ -1,0 +1,51 @@
+// Name: Bruno
+// Last name: Vandekerkhove
+// Student number: s0216676
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    wall(Pos)
+    lamp(Pos)
+    lit(Pos)
+    tip(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    // add new vocabulary symbols here
+    // comment each symbol with intended meaning
+    nexttowall(Pos,Pos)
+}
+
+theory T : V_student {
+    // to be filled in
+    // comment each rule  
+    
+    { // Exhaustive enumeration of positions that are next to walls
+    !a[X]:!b[Y]: nexttowall(P(a+1,b),P(a,b)) <- wall(P(a,b)) & X(a+1).
+    !a[X]:!b[Y]: nexttowall(P(a-1,b),P(a,b)) <- wall(P(a,b)) & X(a-1).
+    !a[X]:!b[Y]: nexttowall(P(a,b+1),P(a,b)) <- wall(P(a,b)) & Y(b+1).
+    !a[X]:!b[Y]: nexttowall(P(a,b-1),P(a,b)) <- wall(P(a,b)) & Y(b-1).
+    }
+    
+    // Number of lamps adjacent to wall matches tip
+    !w[Pos]:!n[Number]: tip(w,n) => #{l[Pos]: lamp(l) & nexttowall(l,w)} = n.
+    
+    { // Lit up paths (blocked by walls)
+    !a[X]:!b[Y]: lit(P(a,b)) <- ?ly[Y]: lamp(P(a,ly)) & ~?wy[Y]: wall(P(a,wy)) & ((wy >= b & wy < ly) | (wy =< b & wy > ly)).
+    !a[X]:!b[Y]: lit(P(a,b)) <- ?lx[X]: lamp(P(lx,b)) & ~?wx[X]: wall(P(wx,b)) & ((wx >= a & wx < lx) | (wx =< a & wx > lx)).
+    }
+    
+}
+
+procedure main() {
+    model = onemodel(T, S1, V_fixed)
+    initVisualization()
+    visualizeLightUp(model)
+}
+
+include "visualize_lightup.idp"
+include "lightup_structures.idp"
