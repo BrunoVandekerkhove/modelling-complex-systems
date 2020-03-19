@@ -43,6 +43,12 @@
 \usepackage[cachedir=minted]{minted}
 \usepackage{wallpaper}
 
+\makeatletter
+\renewcommand\tableofcontents{%
+    \@starttoc{toc}%
+}
+\makeatother
+
 \begin{document}
 
 \thispagestyle{empty}
