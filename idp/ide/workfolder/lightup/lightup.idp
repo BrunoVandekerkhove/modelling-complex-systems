@@ -15,16 +15,11 @@ vocabulary V_fixed {
 
 vocabulary V_student {
     extern vocabulary V_fixed
-    // add new vocabulary symbols here
-    // comment each symbol with intended meaning
-    adjacent(Pos,Pos)
-    blocked(Pos,Pos)
+    adjacent(Pos,Pos) // Represents adjacency of two positions
+    blocked(Pos,Pos) // Represents positions with a wall between them
 }
 
 theory T : V_student {
-    
-    // to be filled in
-    // comment each rule  
     
     // Two positions are adjacent iff they neighbor each other.
     {
