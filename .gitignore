@@ -1,4 +1,12 @@
-/idp/
+!idp/
+
+idp/*
+!idp/ide/
+
+idp/ide/*
+!idp/ide/workfolder/
+
+
 /report/minted/*
 
 ## Core latex/pdflatex auxiliary files:
