@@ -24,7 +24,10 @@ vocabulary V_fixed {
 vocabulary V_student {
     extern vocabulary V_fixed
     
-    prize(Ticket): Prize // The price of the ticket.
+    requiredType: TicketType // The required ticket type for the passenger.
+    
+    
+    price(Ticket): Prize // The price of each ticket.
     
     
 }
@@ -32,17 +35,28 @@ vocabulary V_student {
 theory T : V_student {
     
     // The tickets a passenger acquired should conform to the specification.
-    !t,a,b,c: hasTicket(T(t,a,b,c)) => 
-    	t = Youth & age < 26 
-    	| t = Senior & age > 65 
-    	| t = Standard & 26 =< age =< 65.
+    requiredType = Youth & age < 26 
+    	| requiredType = Senior & age > 65 
+    	| requiredType = Standard & 26 =< age =< 65.
+    !tt,t,s1,s2: hasTicket(T(tt,t,s1,s2)) => tt = requiredType.
+    
+    // If a train passes at s2 right after s1 then there should 
+    //	be a corresponding track.
+    !t,s1,s2,p: passes(t,s1,p) & passes(t,s2,p) => track(s1,s2).
+    
+    // 
+    !t,s,p: passes(t,s,p) & Pass(p-1) => ?s2: passes(t,s2,p-1).
+    !t,s,st: stopsAt(t,s,st) & Stop(st-1) => ?s2: stopsAt(t,s2,st-1).
     
     // The price of a ticket should conform to the specification
+    max{t: passes(t, s, p): p}
+    
+    // The passenger should be able to get onto trains that 
+    //	pass through start/end.
     
     
-    
-    ~?t,s,p: passes(t,s,p) & Pass(p-1) & ~stopsAt(t,s,p-1).
-    ~?t,s,st: stopsAt(t,s,st) & Stop(st-1) & ~stopsAt(t,s,st-1).
+    // There are no two different tickets for the same train
+    !t:?=<1tt,s1,s2: hasTicket(T(tt,t,s1,s2)).
     
 }
 
