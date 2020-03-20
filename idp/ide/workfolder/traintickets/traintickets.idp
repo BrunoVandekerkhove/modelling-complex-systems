@@ -23,13 +23,27 @@ vocabulary V_fixed {
 
 vocabulary V_student {
     extern vocabulary V_fixed
-    // add new vocabulary symbols here
-    // comment each symbol with intended meaning
+    
+    prize(Ticket): Prize // The price of the ticket.
+    
+    
 }
 
 theory T : V_student {
-    // to be filled in
-    // comment each rule
+    
+    // The tickets a passenger acquired should conform to the specification.
+    !t,a,b,c: hasTicket(T(t,a,b,c)) => 
+    	t = Youth & age < 26 
+    	| t = Senior & age > 65 
+    	| t = Standard & 26 =< age =< 65.
+    
+    // The price of a ticket should conform to the specification
+    
+    
+    
+    ~?t,s,p: passes(t,s,p) & Pass(p-1) & ~stopsAt(t,s,p-1).
+    ~?t,s,st: stopsAt(t,s,st) & Stop(st-1) & ~stopsAt(t,s,st-1).
+    
 }
 
 procedure main() {
