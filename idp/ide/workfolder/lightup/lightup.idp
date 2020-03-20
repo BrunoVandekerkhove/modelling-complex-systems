@@ -23,8 +23,8 @@ theory T : V_student {
     
     // Two positions are adjacent iff they neighbor each other.
     {
-        !a,b,y: adjacent(P(a,y),P(b,y)) <- (b = a+1 | b = a-1).
-        !x,a,b: adjacent(P(x,a),P(x,b)) <- (b = a+1 | b = a-1).
+        !a,b,y: adjacent(P(a,y),P(b,y)) <- abs(b-a) = 1.
+        !x,a,b: adjacent(P(x,a),P(x,b)) <- abs(b-a) = 1.
     }
         
     // Walls cannot have any lamps.
