@@ -1,0 +1,15 @@
+vocabulary V{
+	type Color
+	type Area
+	Border(Area,Area)
+	Coloring(Area):Color
+}
+
+theory T : V {
+	!X,Y: Border(X,Y) | Border(Y,X) => Coloring(X) ~= Coloring(Y).
+}
+
+include "coloring_draw.idp"
+include "coloring_instance_1.idp"
+include "coloring_oplossing.aidp"
+include "idpd3/run.idp"

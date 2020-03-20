@@ -1,0 +1,21 @@
+vocabulary V { 
+    type age isa int 
+    myAge : age
+	sonAge : age
+	SonAdult
+}
+
+theory T : V {
+	myAge = 2 * sonAge + 1. myAge + sonAge >= 70. 
+    myAge + sonAge =< 80.
+	SonAdult <=> sonAge >= 21. 
+}
+
+structure S : V { 
+    age = {1..100}
+}
+
+procedure main() {
+	stdoptions.nbmodels = 0
+    printmodels(T)
+}

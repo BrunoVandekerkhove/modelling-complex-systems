@@ -1,0 +1,62 @@
+// Name: Bruno
+// Last name: Vandekerkhove
+// Student number: s0216676
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    wall(Pos)
+    lamp(Pos)
+    lit(Pos)
+    tip(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    // add new vocabulary symbols here
+    // comment each symbol with intended meaning
+    adjacent(Pos,Pos)
+    between(Pos,Pos,Pos)
+}
+
+theory T : V_student {
+    
+    // to be filled in
+    // comment each rule  
+    
+    // Two positions are adjacent iff they neighbor each other.
+    {
+        !a,b,y: adjacent(P(a,y),P(b,y)) <- (b = a+1 | b = a-1).
+        !x,a,b: adjacent(P(x,a),P(x,b)) <- (b = a+1 | b = a-1).
+    }
+    // !a,b,c,d: adjacent(P(a,b),P(c,d)) <=> (a = c & (b = d+1 | b = d-1)) | (b = d & (a = c+1 | a = c-1)).
+        
+    // Walls cannot have any lamps.
+    !x[Pos]: wall(x) => ~lamp(x).
+    
+    // The number of lamps adjacent to walls matches the tips on those walls (if any).
+    !w,n: tip(w,n) => #{l[Pos]: lamp(l) & adjacent(l,w)} = n.
+    
+    // A position is lit if there's a lamp in the same row and column which is not
+    //	blocked by a wall.
+    {
+        !a,b: lit(P(a,b)) <- ?l: lamp(P(a,l)) & ~?w: wall(P(a,w)) & ((w >= b & w < l) | (w =< b & w > l)).
+    	!a,b: lit(P(a,b)) <- ?l: lamp(P(l,b)) & ~?w: wall(P(w,b)) & ((w >= a & w < l) | (w =< a & w > l)).
+    }
+    !a,b: lit(P(a,b)) <=> ?l: (lamp(P(a,l)) & ~?w: wall(P(a,w)) & ((w >= b & w < l) | (w =< b & w > l))) | (lamp(P(l,b)) & ~?w: wall(P(w,b)) & ((w >= a & w < l) | (w =< a & w > l))).
+    
+    // All cells without walls need to be lit.
+    !x: ~wall(x) => lit(x).
+    
+}
+
+procedure main() {
+    model = onemodel(T, S10, V_fixed)
+    initVisualization()
+    visualizeLightUp(model)
+}
+
+include "visualize_lightup.idp"
+include "lightup_structures.idp"
