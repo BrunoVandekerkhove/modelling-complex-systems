@@ -44,7 +44,7 @@ theory T : V_student {
         !x,a,b: blocked(P(x,a),P(x,b)) <- ?w: wall(P(x,w)) & (a =< w =< b | b =< w =< a).
     }
     
-    // A position is lit if there's a lamp in the same row and column which is not
+    // A position is lit if there's a lamp in the same row or column which is not
     //	blocked by a wall.
     !a,b: lit(P(a,b)) <=> ?c,d:lamp(P(c,d)) & (a = c | b = d) & ~blocked(P(a,b),P(c,d)).
     
