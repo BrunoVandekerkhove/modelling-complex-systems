@@ -23,18 +23,12 @@ vocabulary V_fixed {
 
 vocabulary V_student {
     extern vocabulary V_fixed
-    
     requiredType: TicketType // The required ticket type for the passenger.
-    
-    
-    price(Ticket): Prize // The price of each ticket.
-    
-    
 }
 
 theory T : V_student {
     
-    // The tickets a passenger acquired should conform to the specification.
+    // Acquired tickets should be of the right type (based on the passenger's age).
     requiredType = Youth & age < 26 
     	| requiredType = Senior & age > 65 
     	| requiredType = Standard & 26 =< age =< 65.
@@ -42,27 +36,56 @@ theory T : V_student {
     
     // If a train passes at s2 right after s1 then there should 
     //	be a corresponding track.
-    !t,s1,s2,p: passes(t,s1,p) & passes(t,s2,p) => track(s1,s2).
+    !t,s1,s2,p: passes(t,s1,p) & passes(t,s2,p+1) => track(s1,s2).
+
+    // The passes and stops should conform to the specification.
+    !t,s2,p: passes(t,s2,p) & Pass(p-1) => ?s1: passes(t,s1,p-1).
+    !t,s2,st: stopsAt(t,s2,st) & Stop(st-1) => ?s1: stopsAt(t,s1,st-1).
     
-    // 
-    !t,s,p: passes(t,s,p) & Pass(p-1) => ?s2: passes(t,s2,p-1).
-    !t,s,st: stopsAt(t,s,st) & Stop(st-1) => ?s2: stopsAt(t,s2,st-1).
+    // The price of a ticket should correspond to the specification.
+    {
+        !t,s1,s2:paid(T(Youth,t,s1,s2),5) <- hasTicket(T(Youth,t,s1,s2)).
+        !t,s1,s2:paid(T(Senior,t,s1,s2),6) <- hasTicket(T(Senior,t,s1,s2)).
+        !t,s1,s2,p1,p2:paid(T(Standard,t,s1,s2),abs(p2-p1)) <- 
+        	hasTicket(T(Standard,t,s1,s2)) & passes(t,s1,p1) & passes(t,s2,p2).
+    }
     
-    // The price of a ticket should conform to the specification
-    max{t: passes(t, s, p): p}
+    // If a passenger has a ticket the very train should pass at the very stations.
+    !tt,t,s1,s2: hasTicket(T(tt,t,s1,s2)) 
+    	=> ?p1,p2: passes(t,s1,p1) & passes(t,s2,p2) & p1 ~= p2.
     
-    // The passenger should be able to get onto trains that 
-    //	pass through start/end.
+    // There's an outgoing train from the start point.
+    start = end | ?tt,t,s: hasTicket(T(tt,t,start,s)).
     
+    // no edge before start
+    ~?tt,t,s1: hasTicket(T(tt,t,s1,start)).
+    ~?tt,t,s2: hasTicket(T(tt,t,end,s2)).
     
-    // There are no two different tickets for the same train
+    // THIS IS NOT NECESSARY (REMOVE UPON SUBMISSION)
+    // There's at most one outgoing train for each station.
+    // !s1[Station]: #{tt[TicketType],t[Train],s2[Station]: 
+    //	hasTicket(T(tt,t,s1,s2))} =< 1.
+    // There's at most one incoming train for each station.
+    // !s2[Station]: #{tt[TicketType],t[Train],s1[Station]: 
+    //	hasTicket(T(tt,t,s1,s2))} =< 1.
+        
+    // Guarantee that there's a trajectory toward the end 
+    //	(cfr. shortest path assignment)
+    !s2: (s2 ~= end & ?tt1,t1,s1: hasTicket(T(tt1,t1,s1,s2))) 
+    	=> (?tt2,t2,s3: hasTicket(T(tt2,t2,s2,s3))).
+    
+    // There are no two different tickets for the same train.
     !t:?=<1tt,s1,s2: hasTicket(T(tt,t,s1,s2)).
     
 }
 
+// For testing purposes (minimising number of lamps)
+term MinimizePrice : V_fixed { sum{t,p: paid(t,p): p} }
+
 procedure main() {
-    model = onemodel(T, S1, V_fixed)
+    model = onemodel(T, S1, V_student)
     print(model)
+    printmodels(minimize(T, S1, MinimizePrice, V_student))
 }
 
 include "traintickets_structures.idp"
