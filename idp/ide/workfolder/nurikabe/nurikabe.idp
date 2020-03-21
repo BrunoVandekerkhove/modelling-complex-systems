@@ -14,17 +14,36 @@ vocabulary V_fixed {
 
 vocabulary V_student {
     extern vocabulary V_fixed
-    // add new vocabulary symbols here
-    // comment each symbol with intended meaning
+    onIsland(Pos,Pos) // Denotes a position attached to a numbered cell.
 }
 
 theory T : V_student {
-    // to be filled in
-    // comment each rule
+    
+    // Inductive definition of islands.
+    //	(1) Numbered cells are part of an island.
+    //	(2) All land (indirectly) connected to an island is part of that island.
+    {
+    	!i,n: onIsland(i,i) <- islandSize(i,n).
+    	!i,x,y: onIsland(i,P(x,y)) <- 
+        	?a,b: onIsland(i,P(a,b)) & land(P(x,y)) & (abs(x-a) + abs(y-b) = 1).
+    }
+    
+    // There's no land that isn't part of an island.
+    !p: land(p) <=> ?i:onIsland(i,p).
+    
+    // Each island should have the right size.
+    !i: islandSize(i,n) => #{p: onIsland(i,p)} = n.
+    
+    // Everything is either land or water (exclusive or).
+    !p: (land(p) | water(p)) & (~land(p) | ~water(p)).
+    
+    // A sea cannot contain a 2x2 square.
+    ~?x,y: water(P(x,y)) & water(P(x+1,y)) & water(P(x,y+1)) & water(P(x+1,y+1)).
+    
 }
 
 procedure main() {
-    model = onemodel(T, S1, V_fixed)
+    model = onemodel(T, S2, V_fixed)
     initVisualization()
     visualizeNurikabe(model)
 }
