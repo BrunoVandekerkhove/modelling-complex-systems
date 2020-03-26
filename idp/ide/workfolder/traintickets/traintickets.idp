@@ -54,8 +54,7 @@ theory T : V_student {
     
     // If a passenger has a ticket the very train should pass at the very stations.
     //	Note the reaches(s) which makes sure every ticket can actually be used.
-    !tt,t,s,e: hasTicket(T(tt,t,s,e)) 
-    	=> ?p1,p2: stopsAt(t,s,p1) & stopsAt(t,e,p2) & p2 > p1 & reaches(s).
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => ?a,b: stopsAt(t,s,a) & stopsAt(t,e,b) & a > b.
     
     // The passenger is able to travel from the start to the end.
     {
@@ -70,11 +69,16 @@ theory T : V_student {
     // There's no train starting at the terminal.
     ~?tt,t,x:hasTicket(T(tt,t,end,x)).
     
-    // Optional : A station can only be visited once.
+    // OPTIONAL : A station can only be visited once.
     //	This removes useless tickets from the solution.
+    //	(1) define visits which excludes terminals
+    //	(2) don't allow double visits to a station
+    //	(3) make sure every start station can be reached from the start
+    //			so that you end up with a full sequence
     !t,s:(visits(t,s) <=> ?tt,a,b:hasTicket(T(tt,t,a,b)) 
     	& ?x,y,z:passes(t,a,x) & passes(t,b,y) & passes(t,s,z) & x =< z < y). 
     ~(?t1,t2,s: t1 ~= t2 & visits(t1,s) & visits(t2,s)).
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => reaches(s).
     
 }
 
