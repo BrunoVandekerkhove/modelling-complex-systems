@@ -32,7 +32,7 @@ theory T : V_student {
     !p: land(p) <=> ?i:onIsland(i,p).
     
     // Each island should have the right size.
-    !i: islandSize(i,n) => #{p: onIsland(i,p)} = n.
+    !i,n: islandSize(i,n) => #{p[Pos]: onIsland(i,p)} = n.
     
     // Everything is either land or water (exclusive or).
     !p: (land(p) | water(p)) & (~land(p) | ~water(p)).
@@ -43,7 +43,7 @@ theory T : V_student {
 }
 
 procedure main() {
-    model = onemodel(T, S2, V_fixed)
+    model = onemodel(T, S3, V_fixed)
     initVisualization()
     visualizeNurikabe(model)
 }
