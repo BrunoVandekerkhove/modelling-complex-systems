@@ -54,7 +54,7 @@ theory T : V_student {
     // If a passenger has a ticket the very train should pass at the very stations.
     !tt,t,s,e: hasTicket(T(tt,t,s,e)) => ?a,b: stopsAt(t,s,a) & stopsAt(t,e,b) & a < b.
     
-    // Definition of reaches.
+    // Definition of halt.
     //	halt(s,e) holds if the passenger stops at e after stopping at s.
     //	So it represents the next halt.
     {
@@ -69,9 +69,8 @@ theory T : V_student {
         	
 	}
         
-    // The passenger stops at the end.
-	?s:halt(s,end).
-    ~?s:halt(end,s).
+    // The passenger halts at the end.
+	(?s:halt(s,end)) & (~?s:halt(end,s)).
     
     // Every station from which the passenger departs can be reached.
     !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
@@ -79,7 +78,7 @@ theory T : V_student {
     // A station is only stopped at once.
     !s:(?<2p: halt(p,s)) & (?<2n: halt(s,n)).
     
-    // There are no two different tickets for the same train.
+    // There are no two tickets for the same train.
     !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
     
 }
