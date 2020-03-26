@@ -53,8 +53,9 @@ theory T : V_student {
     }
     
     // If a passenger has a ticket the very train should pass at the very stations.
-    !tt,t,s1,s2: hasTicket(T(tt,t,s1,s2)) 
-    	=> ?p1,p2: stopsAt(t,s1,p1) & stopsAt(t,s2,p2) & p2 > p1 & reaches(s1).
+    //	Note the reaches(s) which makes sure every ticket can actually be used.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) 
+    	=> ?p1,p2: stopsAt(t,s,p1) & stopsAt(t,e,p2) & p2 > p1 & reaches(s).
     
     // The passenger is able to travel from the start to the end.
     {
