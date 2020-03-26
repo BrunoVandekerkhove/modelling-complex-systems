@@ -24,6 +24,7 @@ vocabulary V_fixed {
 vocabulary V_student {
     extern vocabulary V_fixed
     requiredType: TicketType // The required ticket type for the passenger.
+    reaches(Station) // Passenger stops in this station.
 }
 
 theory T : V_student {
@@ -46,33 +47,23 @@ theory T : V_student {
     {
         !t,s1,s2:paid(T(Youth,t,s1,s2),5) <- hasTicket(T(Youth,t,s1,s2)).
         !t,s1,s2:paid(T(Senior,t,s1,s2),6) <- hasTicket(T(Senior,t,s1,s2)).
-        !t,s1,s2,p1,p2:paid(T(Standard,t,s1,s2),abs(p2-p1)) <- 
+        !t,s1,s2,p1,p2:paid(T(Standard,t,s1,s2),3*abs(p2-p1)) <- 
         	hasTicket(T(Standard,t,s1,s2)) & passes(t,s1,p1) & passes(t,s2,p2).
     }
     
     // If a passenger has a ticket the very train should pass at the very stations.
     !tt,t,s1,s2: hasTicket(T(tt,t,s1,s2)) 
-    	=> ?p1,p2: passes(t,s1,p1) & passes(t,s2,p2) & p1 ~= p2.
+    	=> ?p1,p2: stopsAt(t,s1,p1) & stopsAt(t,s2,p2) & p2 > p1.
     
-    // There's an outgoing train from the start point.
-    start = end | ?tt,t,s: hasTicket(T(tt,t,start,s)).
-    
-    // no edge before start
-    ~?tt,t,s1: hasTicket(T(tt,t,s1,start)).
-    ~?tt,t,s2: hasTicket(T(tt,t,end,s2)).
-    
-    // THIS IS NOT NECESSARY (REMOVE UPON SUBMISSION)
-    // There's at most one outgoing train for each station.
-    // !s1[Station]: #{tt[TicketType],t[Train],s2[Station]: 
-    //	hasTicket(T(tt,t,s1,s2))} =< 1.
-    // There's at most one incoming train for each station.
-    // !s2[Station]: #{tt[TicketType],t[Train],s1[Station]: 
-    //	hasTicket(T(tt,t,s1,s2))} =< 1.
-        
-    // Guarantee that there's a trajectory toward the end 
-    //	(cfr. shortest path assignment)
-    !s2: (s2 ~= end & ?tt1,t1,s1: hasTicket(T(tt1,t1,s1,s2))) 
-    	=> (?tt2,t2,s3: hasTicket(T(tt2,t2,s2,s3))).
+    // The passenger is able to travel from the start to the end.
+    {
+		reaches(start).
+        !s,e: reaches(e) <- reaches(s) & ?tt,t:hasTicket(T(tt,t,s,e)).
+		//!s,e: reaches(e) <- reaches(s) & 
+        //	?tt,t,a,b,x,y:hasTicket(T(tt,t,a,b)) & stopsAt(t,a,x) & stopsAt(t,b,y) & 
+        //	?ss:(stopsAt(t,s,ss) & y >= ss >= x & ?se:stopsAt(t,e,se) & y >= se > ss).
+	}
+	reaches(end).
     
     // There are no two different tickets for the same train.
     !t:?=<1tt,s1,s2: hasTicket(T(tt,t,s1,s2)).
@@ -83,9 +74,11 @@ theory T : V_student {
 term MinimizePrice : V_fixed { sum{t,p: paid(t,p): p} }
 
 procedure main() {
-    model = onemodel(T, S1, V_student)
-    print(model)
-    printmodels(minimize(T, S1, MinimizePrice, V_student))
+    // model = onemodel(T, S1, V_student)
+    stdoptions.nbmodels = 3
+	//This should fail, only one should be obtained.
+	printmodels(modelexpand(T, S1, V_student))
+    // printmodels(minimize(T, S1, MinimizePrice, V_student))
 }
 
 include "traintickets_structures.idp"
