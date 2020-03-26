@@ -1,0 +1,21 @@
+REPORT FOR THE PROJECT ON IDP
+Bruno Vandekerkhove
+s0216676
+-----------------------------
+
+*** Light Up ***
+
+ - blocked(p1,p2) holds iff p1 and p2 lie in the same column/row but a wall is separating them.
+
+*** Train Tickets ***
+
+ - requiredType:TicketType represents the required type of the tickets that the passenger can obtain. It's used for convenience (and efficiency, maybe).
+ - halts(s1,s2) holds iff the passenger stops at s1 after stopping at s2.
+
+*** Nurikabe ***
+
+ - onIsland(i,p) holds iff p is indirectly connected to some numbered cell (i.e. it belongs to the island represented by that cell).
+
+*** Time Spent on Project ***
+
+I spent 14 hours on the project.
