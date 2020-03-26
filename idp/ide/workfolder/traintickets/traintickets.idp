@@ -24,8 +24,7 @@ vocabulary V_fixed {
 vocabulary V_student {
     extern vocabulary V_fixed
     requiredType: TicketType // The required ticket type for the passenger.
-    reaches(Station) // Passenger stops in this station.
-    visits(Train,Station) // Passengers takes a train that passes by a station.
+    halt(Station,Station) // Passenger halts at a station after halting at an other.
 }
 
 theory T : V_student {
@@ -53,32 +52,35 @@ theory T : V_student {
     }
     
     // If a passenger has a ticket the very train should pass at the very stations.
-    //	Note the reaches(s) which makes sure every ticket can actually be used.
-    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => ?a,b: stopsAt(t,s,a) & stopsAt(t,e,b) & a > b.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => ?a,b: stopsAt(t,s,a) & stopsAt(t,e,b) & a < b.
     
-    // The passenger is able to travel from the start to the end.
+    // Definition of reaches.
+    //	halt(s,e) holds if the passenger stops at e after stopping at s.
+    //	So it represents the next halt.
     {
-		reaches(start).
-        !s,e: reaches(e) <- reaches(s) & ?tt,t:hasTicket(T(tt,t,s,e)).
+		!s:halt(start,s) <- 
+        	?tt,t,e,x:hasTicket(T(tt,t,start,e)) 
+        	& stopsAt(t,start,x) 
+        	& stopsAt(t,s,x+1).
+        !p,s,n:halt(s,n) <- halt(p,s)
+        	& ?tt,t,a,b:hasTicket(T(tt,t,a,b)) 
+        	& ?x:stopsAt(t,a,x) & ?y:stopsAt(t,b,y) & ?z:stopsAt(t,s,z) & x =< z < y
+        	& stopsAt(t,n,z+1).
+        	
 	}
-	reaches(end).
+        
+    // The passenger stops at the end.
+	?s:halt(s,end).
+    ~?s:halt(end,s).
+    
+    // Every station from which the passenger departs can be reached.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
+    
+    // A station is only stopped at once.
+    !s:(?<2p: halt(p,s)) & (?<2n: halt(s,n)).
     
     // There are no two different tickets for the same train.
     !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
-    
-    // There's no train starting at the terminal.
-    ~?tt,t,x:hasTicket(T(tt,t,end,x)).
-    
-    // OPTIONAL : A station can only be visited once.
-    //	This removes useless tickets from the solution.
-    //	(1) define visits which excludes terminals
-    //	(2) don't allow double visits to a station
-    //	(3) make sure every start station can be reached from the start
-    //			so that you end up with a full sequence
-    !t,s:(visits(t,s) <=> ?tt,a,b:hasTicket(T(tt,t,a,b)) 
-    	& ?x,y,z:passes(t,a,x) & passes(t,b,y) & passes(t,s,z) & x =< z < y). 
-    ~(?t1,t2,s: t1 ~= t2 & visits(t1,s) & visits(t2,s)).
-    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => reaches(s).
     
 }
 
@@ -89,7 +91,7 @@ procedure main() {
     // model = onemodel(T, S1, V_student)
     stdoptions.nbmodels = 10
 	printmodels(modelexpand(T, S1, V_student))
-    printmodels(minimize(T, S1, MinimizePrice, V_student))
+    // printmodels(minimize(T, S1, MinimizePrice, V_student))
 }
 
 include "traintickets_structures.idp"
