@@ -25,7 +25,7 @@ theory T : V_student {
     
     // The number of lamps adjacent to walls matches the tips on those walls (if any).
     !wx,wy,n: tip(P(wx,wy),n) 
-    	=> #{lx,ly: lamp(P(lx,ly)) & abs(wx-lx) + abs(ly-wy) = 1} = n.
+    	=> #{lx[X],ly[Y]: lamp(P(lx,ly)) & abs(wx-lx) + abs(ly-wy) = 1} = n.
     
     // Two positions are blocked if there's a wall between them.
     {
@@ -40,14 +40,15 @@ theory T : V_student {
     // All cells without walls should be lit.
     !x: ~wall(x) => lit(x).
     
+    // Lamps don't shine on each other
+    ~?x,a,b: lamp(P(x,a)) & lamp(P(x,b)) & a > b & ~blocked(P(x,a),P(x,b)).
+    ~?y,a,b: lamp(P(a,y)) & lamp(P(b,y)) & a > b & ~blocked(P(a,y),P(b,y)).
+    
 }
 
 // For testing purposes (minimising number of lamps)
 term MinimizeLamps : V_fixed { #{p: lamp(p)} }
 vocabulary OutputVocabulary { extern V_fixed::lamp/1 
-}
-procedure main_student() {
-    printmodels(minimize(T, S5, MinimizeLamps, OutputVocabulary))
 }
 
 // Main procedure
@@ -55,6 +56,7 @@ procedure main() {
     model = onemodel(T, S10, V_fixed)
     initVisualization()
     visualizeLightUp(model)
+    // printmodels(minimize(T, S5, MinimizeLamps, OutputVocabulary))
 }
 
 include "visualize_lightup.idp"
