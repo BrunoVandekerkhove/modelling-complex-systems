@@ -60,9 +60,6 @@ theory T : V_student {
     {
 		reaches(start).
         !s,e: reaches(e) <- reaches(s) & ?tt,t:hasTicket(T(tt,t,s,e)).
-		//!s,e: reaches(e) <- reaches(s) & 
-        //	?tt,t,a,b,x,y:hasTicket(T(tt,t,a,b)) & stopsAt(t,a,x) & stopsAt(t,b,y) & 
-        //	?ss:(stopsAt(t,s,ss) & y >= ss >= x & ?se:stopsAt(t,e,se) & y >= se > ss).
 	}
 	reaches(end).
     
