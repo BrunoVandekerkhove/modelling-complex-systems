@@ -40,7 +40,7 @@ theory T : V_student {
     // All cells without walls should be lit.
     !x: ~wall(x) => lit(x).
     
-    // Lamps don't shine on each other
+    // Lamps don't shine on each other.
     ~?x,a,b: lamp(P(x,a)) & lamp(P(x,b)) & a > b & ~blocked(P(x,a),P(x,b)).
     ~?y,a,b: lamp(P(a,y)) & lamp(P(b,y)) & a > b & ~blocked(P(a,y),P(b,y)).
     
