@@ -14,8 +14,9 @@ s0216676
 
 *** Nurikabe ***
 
- - onIsland(i,p) holds iff p is indirectly connected to some numbered cell (i.e. it belongs to the island represented by that cell).
+ - onIsland(i,p) holds iff position p is (indirectly) connected to some numbered cell at position i (i.e. it belongs to the island represented by that cell).
+ - sea(p) holds iff position p is (indirectly) connected to the top-most water-cell in the left-most column that happens to have a cell with water in it. This cell is unique so it allows for an inductive specification of a unique body of water which is called the sea.
 
 *** Time Spent on Project ***
 
-I spent 14 hours on the project.
+I spent 14 hours on the project. 11 hours writing the code and a few more hours removing misinterpretations / errors.
