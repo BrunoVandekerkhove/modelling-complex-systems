@@ -62,7 +62,8 @@ theory T : V_student {
         	?tt,t,e,x:hasTicket(T(tt,t,start,e)) 
         	& stopsAt(t,start,x) 
         	& stopsAt(t,s,x+1).
-        !p,s,n:halt(s,n) <- halt(p,s)
+        !p,s,n:halt(s,n) <- 
+        	halt(p,s)
         	& ?tt,t,a,b:hasTicket(T(tt,t,a,b)) 
         	& ?x:stopsAt(t,a,x) & ?y:stopsAt(t,b,y) & ?z:stopsAt(t,s,z) & x =< z < y
         	& stopsAt(t,n,z+1).
@@ -70,16 +71,21 @@ theory T : V_student {
 	}
         
     // The passenger halts at the end.
-	(?s:halt(s,end)) & (~?s:halt(end,s)).
+	?s:halt(s,end).
     
     // Every station from which the passenger departs can be reached.
     !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
     
+    // There are no two tickets for the same train.
+    !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
+    
+    /*
     // A station is only stopped at once.
     !s:(?<2p: halt(p,s)) & (?<2n: halt(s,n)).
     
-    // There are no two tickets for the same train.
-    !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
+    // The passenger doesn't depart from the terminal.
+    ~?s:halt(end,s).
+    */
     
 }
 
@@ -88,7 +94,7 @@ term MinimizePrice : V_fixed { sum{t,p: paid(t,p): p} }
 
 procedure main() {
     // model = onemodel(T, S1, V_student)
-    stdoptions.nbmodels = 10
+    stdoptions.nbmodels = 2
 	printmodels(modelexpand(T, S1, V_student))
     // printmodels(minimize(T, S1, MinimizePrice, V_student))
 }
