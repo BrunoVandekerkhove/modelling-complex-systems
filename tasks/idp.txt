@@ -1,7 +1,7 @@
 REPORT FOR THE PROJECT ON IDP
 Bruno Vandekerkhove
 s0216676
------------------------------
+--------------------------------------------------
 
 *** Light Up ***
 
@@ -14,9 +14,19 @@ s0216676
 
 *** Nurikabe ***
 
- - onIsland(i,p) holds iff position p is (indirectly) connected to some numbered cell at position i (i.e. it belongs to the island represented by that cell).
- - sea(p) holds iff position p is (indirectly) connected to the top-most water-cell in the left-most column that happens to have a cell with water in it. This cell is unique so it allows for an inductive specification of a unique body of water which is called the sea.
+ - connected(p1,p2) holds iff p1 and p2 are cells with both land of both water in them and they're connected, directly or indirectly. Indirect connectivity is modelled with a transitive closure.
 
 *** Time Spent on Project ***
 
 I spent 14 hours on the project. 11 hours writing the code and a few more hours removing misinterpretations / errors.
+
+--------------------------------------------------
+CONSIDERED ALTERNATIVES
+This can (and probably should) be ignored.
+They're alternative theories that were considered.
+--------------------------------------------------
+
+*** Nurikabe (alternative for efficiency) ***
+
+ - onIsland(i,p) holds iff position p is (indirectly) connected to some numbered cell at position i (i.e. it belongs to the island represented by that cell).
+ - sea(p) holds iff position p is (indirectly) connected to the top-most water-cell in the left-most column that happens to have a cell with water in it. This cell is unique so it allows for an inductive specification of a unique body of water which is called the sea.
