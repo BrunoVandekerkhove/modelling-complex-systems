@@ -23,6 +23,12 @@ theory T : V_student {
     // Walls cannot have any lamps.
     !x[Pos]: wall(x) => ~lamp(x).
     
+    // Only walls can have tips.
+    !x[Pos]: ?t: tip(x,t) => wall(x).
+    
+    // There's a maximum of one tip per position.
+    ?<2p:?n:tip(p,n).
+    
     // The number of lamps adjacent to walls matches the tips on those walls (if any).
     !wx,wy,n: tip(P(wx,wy),n) 
     	=> #{lx[X],ly[Y]: lamp(P(lx,ly)) & abs(wx-lx) + abs(ly-wy) = 1} = n.
