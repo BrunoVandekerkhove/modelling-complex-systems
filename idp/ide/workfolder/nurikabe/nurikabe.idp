@@ -33,7 +33,10 @@ theory T : V_student {
     //	(1) Take top left cell with water as the base case.
     //	(2) Any cell connected to that cell is part of the sea.
     {
-        !x,y: sea(P(x,y)) <- water(P(x,y)) & ~?s,t: water(P(s,t)) & (s < x | t < y).
+        !x,y: sea(P(x,y)) <- 
+        	water(P(x,y)) 
+        	& (~?s,t: water(P(s,t)) & s < x) 
+        	& (~?z: water(P(x,z)) & z < y).
         !x,y: sea(P(x,y)) <- 
         	?a,b:sea(P(a,b)) & water(P(x,y)) & (abs(x-a) + abs(y-b) = 1).
     }
@@ -49,17 +52,17 @@ theory T : V_student {
     
     // A sea cannot contain a 2x2 square.
     ~?x,y: water(P(x,y)) & water(P(x+1,y)) & water(P(x,y+1)) & water(P(x+1,y+1)).
-    
+        
     // All water is part of the sea.
     !p: water(p) => sea(p).
     
 }
 
 procedure main() {
-    model = onemodel(T, S1, V_fixed)
+    model = onemodel(T, S10, V_fixed)
     initVisualization()
     visualizeNurikabe(model)
-    printmodels(modelexpand(T,S1,V_student))
+    printmodels(modelexpand(T,S2,V_student))
 }
 
 include "visualize_nurikabe.idp"
