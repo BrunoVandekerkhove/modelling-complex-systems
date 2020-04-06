@@ -32,7 +32,7 @@ theory T : V_student {
     ~(age =< 65 & ?t,s,e: hasTicket(T(Senior,t,s,e))).
     ~(age >= 26 & ?t,s,e: hasTicket(T(Youth,t,s,e))).
     
-    // If a train passes at s2 right after s1 then there should 
+    // If a train passes by s2 right after s1 then there should 
     //	be a corresponding track.
     !t,s,e,p: passes(t,s,p) & passes(t,e,p+1) => track(s,e).
 
@@ -53,7 +53,7 @@ theory T : V_student {
     
     // Definition of halt.
     //	halt(s,e) holds if the passenger stops at e after stopping at s.
-    //	So it represents the next halt.
+    //	So it represents each next halt.
     {
 		!s:halt(start,s) <- 
         	?tt,t,e,x:hasTicket(T(tt,t,start,e)) 
@@ -64,19 +64,18 @@ theory T : V_student {
         	& ?tt,t,a,b:hasTicket(T(tt,t,a,b)) 
         	& ?x:stopsAt(t,a,x) & ?y:stopsAt(t,b,y) & ?z:stopsAt(t,s,z) & x =< z < y
         	& stopsAt(t,n,z+1).
-        	
 	}
         
-    // The passenger halts at the end.
+    // The passenger should be able to travel to the destination.
 	?s:halt(s,end).
-    
-    // Every station from which the passenger departs can be reached.
-    !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
     
     // There are no two tickets for the same train.
     !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
     
-    /*
+    /* Invalid constraints commented out after clarifications in discussion board.
+    // Every station from which the passenger departs can be reached.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
+    
     // A station is only stopped at once.
     !s:(?<2p: halt(p,s)) & (?<2n: halt(s,n)).
     
@@ -86,14 +85,14 @@ theory T : V_student {
     
 }
 
-// For testing purposes (minimising number of lamps)
-term MinimizePrice : V_fixed { sum{t,p: paid(t,p): p} }
-
 procedure main() {
-    // model = onemodel(T, S1, V_student)
-    stdoptions.nbmodels = 200
+    model = onemodel(T, S1, V_student)
+    stdoptions.nbmodels = 60
 	printmodels(modelexpand(T, S1, V_student))
-    // printmodels(minimize(T, S1, MinimizePrice, V_student))
+    //iterator = modelIterator(T, S1, V_fixed);
+	//for model in iterator do
+	//	print (model );
+	//end
 }
 
 include "traintickets_structures.idp"
