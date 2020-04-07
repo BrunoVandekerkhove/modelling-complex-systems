@@ -15,7 +15,7 @@ vocabulary V_fixed {
 vocabulary V_student {
     extern vocabulary V_fixed
     connected(Pos,Pos)
-    /*
+    /* Alternative approach that's more efficient.
     onIsland(Pos,Pos) // Denotes a position (indirectly) connected to a numbered cell.
     sea(Pos) // Denotes a position that's part of the sea.
     */
@@ -41,8 +41,11 @@ theory T : V_student {
     // Each island should have the right size.
     !i,n: islandSize(i,n) => #{p[Pos]: connected(i,p)} = n.
     
-    // Everything is either land or water (exclusive or).
-    !p: (land(p) | water(p)) & (~land(p) | ~water(p)).
+    // A position cannot have multiple numbers (specifying island sizes).
+    !p:?=<1s: islandSize(p,s).
+    
+    // Everything is either land or water.
+    !p: land(p) <=> ~water(p).
     
     // A sea cannot contain a 2x2 square.
     ~?x,y: water(P(x,y)) & water(P(x+1,y)) & water(P(x,y+1)) & water(P(x+1,y+1)).
@@ -50,7 +53,7 @@ theory T : V_student {
     // All water is part of the sea.
     ~?p1,p2: water(p1) & water(p2) & ~connected(p1,p2).
     
-    /*
+    /* Alternative approach that's more efficient.
     // Inductive definition of islands.
     //	(1) Numbered cells are part of an island.
     //	(2) All land (indirectly) connected to an island is part of that island.
@@ -94,7 +97,6 @@ procedure main() {
     model = onemodel(T, S10, V_fixed)
     initVisualization()
     visualizeNurikabe(model)
-    printmodels(modelexpand(T,S2,V_student))
 }
 
 include "visualize_nurikabe.idp"
