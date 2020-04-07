@@ -1,0 +1,4160 @@
+structure S1 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S2 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S3 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S4 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S5 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S6 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S7 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S8 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S9 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S10 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S11 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S12 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S13 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S14 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S15 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S16 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S17 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S18 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S19 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S20 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S21 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S22 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S23 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S24 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S25 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S26 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S27 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S28 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S29 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S30 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S31 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S32 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S33 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S34 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S35 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S36 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S37 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S38 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S39 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S40 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S41 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S42 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S43 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S44 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S45 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S46 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S47 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S48 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S49 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S50 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S51 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S52 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S53 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S54 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S55 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S56 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S57 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S58 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S59 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S60 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S61 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S62 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S63 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S64 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S65 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S66 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S67 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S68 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S69 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S70 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S71 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S72 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S73 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S74 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S75 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S76 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S77 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S78 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S79 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S80 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S81 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S82 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S83 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S84 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S85 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S86 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S87 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S88 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S89 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S90 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S91 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S92 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S93 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S94 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S95 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S96 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S97 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S98 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S99 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S100 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S101 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S102 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S103 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S104 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S105 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S106 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S107 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S108 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S109 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S110 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S111 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S112 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S113 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S114 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S115 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S116 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S117 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S118 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S119 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S120 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","C");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S121 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S122 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S123 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S124 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S125 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S126 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S127 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S128 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S129 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S130 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S131 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S132 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S133 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S134 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S135 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S136 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S137 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S138 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S139 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S140 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","A","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S141 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S142 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S143 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S144 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S145 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S146 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S147 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S148 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S149 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S150 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","C");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S151 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S152 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S153 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S154 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S155 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","B","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S156 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S157 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S158 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","D","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S159 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","F");T(Standard,"IC4","F","E");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
+structure S160 : V_student {
+    hasTicket = {T(Standard,"IC1","A","E");T(Standard,"IC2","E","A");T(Standard,"L1","C","B");T(Standard,"L2","C","A");T(Standard,"IC3","E","D");T(Standard,"IC4","D","F");}
+
+    Station = { A; B; C; D; E; F; }
+    Train = { IC1; IC2; IC3; IC4; L1; L2; }
+    passes = {
+        IC1,A,0; IC1,B,1; IC1,E,2;
+        IC2,E,0; IC2,B,1; IC2,A,2;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    stopsAt = {
+        IC1,A,0; IC1,E,1;
+        IC2,E,0; IC2,A,1;
+        IC3,E,0; IC3,F,1; IC3,D,2;
+        IC4,D,0; IC4,F,1; IC4,E,2;
+        L1,A,0; L1,C,1; L1,B,2;
+        L2,B,0; L2,C,1; L2,A,2;
+    }
+    track = { A,B; B,A; B,C; C,B; C,A; A,C; B,E; E,B; F,E; E,F; D,F; F,D; }
+    age = 39
+    start = A
+    end = F
+    Prize = {0..50}}
