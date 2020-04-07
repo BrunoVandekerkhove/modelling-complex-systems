@@ -40,6 +40,9 @@ theory T : V_student {
     !t,e,p: passes(t,e,p) & Pass(p-1) => ?s: passes(t,s,p-1).
     !t,e,st: stopsAt(t,e,st) & Stop(st-1) => ?s: stopsAt(t,s,st-1).
     
+    // Each stop is a pass.
+    !t,s,st: stopsAt(t,s,st) => ?p: passes(t,s,p).
+    
     // The price of a ticket should correspond to the specification.
     {
         !t,s,e:paid(T(Youth,t,s,e),5) <- hasTicket(T(Youth,t,s,e)).
@@ -53,7 +56,6 @@ theory T : V_student {
     
     // Definition of halt.
     //	halt(s,e) holds if the passenger stops at e after stopping at s.
-    //	So it represents each next halt.
     {
 		!s:halt(start,s) <- 
         	?tt,t,e,x:hasTicket(T(tt,t,start,e)) 
@@ -67,7 +69,7 @@ theory T : V_student {
 	}
         
     // The passenger should be able to travel to the destination.
-	?s:halt(s,end).
+    ?s:halt(s,end).
     
     // There are no two tickets for the same train.
     !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
@@ -86,13 +88,10 @@ theory T : V_student {
 }
 
 procedure main() {
-    model = onemodel(T, S1, V_student)
-    stdoptions.nbmodels = 60
-	printmodels(modelexpand(T, S1, V_student))
-    //iterator = modelIterator(T, S1, V_fixed);
-	//for model in iterator do
-	//	print (model );
-	//end
+    iterator = modelIterator(T, S1, V_fixed);
+    for model in iterator do
+        print (model );
+    end
 }
 
 include "traintickets_structures.idp"
