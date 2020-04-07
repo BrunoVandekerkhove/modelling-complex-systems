@@ -52,17 +52,11 @@ theory T : V_student {
     
 }
 
-// For testing purposes (minimising number of lamps)
-term MinimizeLamps : V_fixed { #{p: lamp(p)} }
-vocabulary OutputVocabulary { extern V_fixed::lamp/1 
-}
-
 // Main procedure
 procedure main() {
     model = onemodel(T, S10, V_fixed)
     initVisualization()
     visualizeLightUp(model)
-    // printmodels(minimize(T, S5, MinimizeLamps, OutputVocabulary))
 }
 
 include "visualize_lightup.idp"
