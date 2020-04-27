@@ -1,0 +1,72 @@
+// author: Simon Marynissen
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    land(Pos)
+    water(Pos)
+    islandSize(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    xOf(Pos) : X
+    yOf(Pos) : Y
+    neighbor(Pos, Pos)
+    belongsToIslandOf(Pos, Pos) // belongsToIslandOf(p,q) holds iff q is numbered and p belongs to the island of the numbered tile q
+    sea : Pos // some random sea tile
+    connectedToSea(Pos)
+}
+
+theory T : V_student {
+    { // definition of neighbor
+        ! x[X] y[Y]: neighbor(P(x, y), P(x, y + 1)) <- Y(y + 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x, y - 1)) <- Y(y - 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x + 1, y)) <- X(x + 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x - 1, y)) <- X(x - 1).
+        ! p[Pos] q[Pos]: neighbor(p, q) <- neighbor(q, p).
+    }
+    { // definition of xOf and yOf
+        ! x[X] y[Y]: xOf(P(x, y)) = x.
+        ! x[X] y[Y]: yOf(P(x, y)) = y.
+    }
+    { // definition of belongsToIslandOf
+        ! p[Pos]: belongsToIslandOf(p, p) <- ? n[Number]: islandSize(p, n).
+        ! p[Pos] q[Pos]: belongsToIslandOf(p, q) <- land(p) & (? r[Pos]: neighbor(p, r) & belongsToIslandOf(r, q)).
+    }
+    // at most one number in an island
+    ! p[Pos] q[Pos]: belongsToIslandOf(p, q) & (? n[Number]: islandSize(p, n)) => p = q.
+    // at least one number in an island
+    ! p[Pos]: land(p) => ? q[Pos]: belongsToIslandOf(p, q).
+    // the correct number of land cells in an island
+    ! p[Pos] n[Number]: islandSize(p, n) => #{q[Pos] : belongsToIslandOf(q, p)} = n.
+    // each cell is land xor water
+    ! p[Pos]: ~land(p) <=> water(p).
+    // every numbered cell is land
+    ! p[Pos]: (? n[Number]: islandSize(p, n)) => land(p).
+
+    // sea is water
+    water(sea).
+    { // definition of connectedToSea
+        connectedToSea(sea).
+        ! p[Pos]: connectedToSea(p) <- water(p) & ? q[Pos]: neighbor(p, q) & connectedToSea(q).
+    }
+    // every water cell is connected
+    ! p[Pos]: water(p) => connectedToSea(p).
+    // no 2x2 water cells
+    ! x[X] y[Y]: X(x+1) & Y(y+1) => ~(water(P(x, y)) & water(P(x + 1, y)) & water(P(x, y + 1)) & water(P(x + 1, y + 1))).
+
+    // each cell has at most one number
+    ! p[Pos]: #{n[Number] : islandSize(p, n)} =< 1.
+}
+
+procedure main() {
+    model = onemodel(T, S1, V_fixed)
+    initVisualization()
+    visualizeNurikabe(model)
+}
+
+include "visualize_nurikabe.idp"
+include "nurikabe_structures.idp"
