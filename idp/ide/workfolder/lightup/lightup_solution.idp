@@ -1,0 +1,80 @@
+// author: Simon Marynissen
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    wall(Pos)
+    lamp(Pos)
+    lit(Pos)
+    tip(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    inSameColumn(Pos, Pos)
+    inSameRow(Pos, Pos)
+    xOf(Pos) : X
+    yOf(Pos) : Y
+    neighbor(Pos, Pos)
+    minX(Pos, Pos) : X
+    maxX(Pos, Pos) : X
+    minY(Pos, Pos) : Y
+    maxY(Pos, Pos) : Y
+}
+
+theory T : V_student {
+    { // definition of neighbor
+        ! x[X] y[Y]: neighbor(P(x, y), P(x, y + 1)) <- Y(y + 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x, y - 1)) <- Y(y - 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x + 1, y)) <- X(x + 1).
+        ! x[X] y[Y]: neighbor(P(x, y), P(x - 1, y)) <- X(x - 1).
+        ! p[Pos] q[Pos]: neighbor(p, q) <- neighbor(q, p).
+    }
+    { // definition of inSameColumn and inSameRow
+        ! x[X] y1[Y] y2[Y]: inSameColumn(P(x, y1), P(x, y2)).
+        ! x1[X] x2[X] y[Y]: inSameRow(P(x1, y), P(x2, y)).
+    }
+    { // definition of xOf and yOf
+        ! x[X] y[Y]: xOf(P(x, y)) = x.
+        ! x[X] y[Y]: yOf(P(x, y)) = y.
+    }
+    { // definition of minX, maxX, minY, and maxY
+        ! p[Pos] q[Pos]: minX(p, q) = min(xOf(p), xOf(q)).
+        ! p[Pos] q[Pos]: maxX(p, q) = max(xOf(p), xOf(q)).
+        ! p[Pos] q[Pos]: minY(p, q) = min(yOf(p), yOf(q)).
+        ! p[Pos] q[Pos]: maxY(p, q) = max(yOf(p), yOf(q)).
+    }
+    { // definition of lit
+        ! p[Pos]: lit(p) <- ? q[Pos]: lamp(q) & inSameRow(p, q) & (! x[X]: minX(p, q) =< x =< maxX(p, q) => ~wall(P(x, yOf(p)))).
+        ! p[Pos]: lit(p) <- ? q[Pos]: lamp(q) & inSameColumn(p, q) & (! y[X]: minY(p, q) =< y =< maxY(p, q) => ~wall(P(xOf(p), y))).
+    }
+
+    // lamps cannot see each other
+    ! p[Pos] q[Pos]: (lamp(p) & lamp(q) & p ~= q & inSameRow(p, q)) => (? x[X]: wall(P(x, yOf(p))) & minX(p, q) < x < maxX(p, q)).
+    ! p[Pos] q[Pos]: (lamp(p) & lamp(q) & p ~= q & inSameColumn(p, q)) => (? y[Y]: wall(P(xOf(p), y)) & minY(p, q) < y < maxY(p, q)).
+
+    // correct number of lamp around tips
+    ! p[Pos]: (? n[Number]: tip(p, n)) => (? n[Number]: tip(p, n) & #{q[Pos]: neighbor(p,q) & lamp(q)} = n).
+    // lamps cannot be placed on walls
+    ! p[Pos]: wall(p) => ~lamp(p).
+
+    // every non-wall is lit
+    ! p[Pos]: ~wall(p) => lit(p).
+
+    // extra constraints that restrict structure
+    // tips are on walls
+    ! p[Pos]: (? n[Number]: tip(p, n)) => wall(p).
+    // at most one tip on a position
+    ! p[Pos]: ?=<1 n[Number]: tip(p, n).
+}
+
+procedure main() {
+    model = onemodel(T, S1, V_fixed)
+    initVisualization()
+    visualizeLightUp(model)
+}
+
+include "visualize_lightup.idp"
+include "lightup_structures.idp"
