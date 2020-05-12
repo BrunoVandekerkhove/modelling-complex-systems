@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="ParkingLot0"/>
+<org.eventb.core.seesContext name="," org.eventb.core.target="ParkingLotContext"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="nb_parked ≔ 0" org.eventb.core.label="init_parked"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_entering ≔ 0" org.eventb.core.label="init_entering"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="nb_exiting ≔ 0" org.eventb.core.label="init_exiting"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_parking_lot"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="space_left" org.eventb.core.predicate="nb_entering + nb_parked &lt; nb_spaces"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_entering ≔ nb_entering + 1" org.eventb.core.label="entering"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="noone_exiting" org.eventb.core.predicate="nb_exiting = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="nb_parked"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="nb_parked_type" org.eventb.core.predicate="nb_parked ∈ ℕ"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="nb_entering"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="nb_entering_type" org.eventb.core.predicate="nb_entering ∈ ℕ"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="nb_exiting"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="nb_exiting_type" org.eventb.core.predicate="nb_exiting ∈ ℕ"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="gluing_invariant" org.eventb.core.predicate="in_parking_lot = nb_entering + nb_parked + nb_exiting"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="one_way" org.eventb.core.predicate="nb_entering = 0 ∨ nb_exiting = 0"/>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="park">
+<org.eventb.core.guard name="'" org.eventb.core.label="entering" org.eventb.core.predicate="nb_entering &gt; 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_parked ≔ nb_parked + 1" org.eventb.core.label="park"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="nb_entering ≔ nb_entering −1" org.eventb.core.label="enter"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="exit">
+<org.eventb.core.guard name="'" org.eventb.core.label="parked" org.eventb.core.predicate="nb_parked &gt; 0"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="noone_entering" org.eventb.core.predicate="nb_entering = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="nb_exiting ≔ nb_exiting + 1" org.eventb.core.label="leave"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="nb_parked ≔ nb_parked −1" org.eventb.core.label="unpark"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave">
+<org.eventb.core.guard name="'" org.eventb.core.label="exiting" org.eventb.core.predicate="nb_exiting &gt; 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_exiting ≔ nb_exiting − 1" org.eventb.core.label="leave"/>
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="leave_parking_lot"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

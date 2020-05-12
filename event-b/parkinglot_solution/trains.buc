@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="tracks"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="next_pass"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="stops"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="next_pass_type" org.eventb.core.predicate="next_pass ∈ (trains∖{no_train}) × stations ⇸ stations"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="next_pass_specification" org.eventb.core.predicate="next_pass = {(IC1↦A↦B),(IC1↦B↦E)}"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="stops_type" org.eventb.core.predicate="stops ∈ trains∖{no_train} → ℙ1(stations)"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="stops_specification" org.eventb.core.predicate="stops = {(IC1↦{A,E}),(IC2↦{A,E}),(IC3↦{E,D,F}),(IC4↦{E,D,F}),(L1↦{A,B,C}),(L2↦{A,B,C})}"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="passes_type" org.eventb.core.predicate="passes ∈ trains∖{no_train} → ℙ1(stations)"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="passes_specification" org.eventb.core.predicate="∀t· (t ↦ {s ∣ (t↦s) ∈ dom(next_pass) ∨ (∃p·(t↦p↦s) ∈ next_pass)}) ∈ passes"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="first_pass_type" org.eventb.core.predicate="first_pass ∈ trains∖{no_train} ↔ stations"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="first_pass_specification" org.eventb.core.predicate="∀t,s· (t↦s) ∈ dom(next_pass) ∨ (∃p· (t↦p↦s) ∈ next_pass) ⇒ (t↦s) ∈ first_pass"/>
+<org.eventb.core.axiom name="," org.eventb.core.label="equal_stations" org.eventb.core.predicate="∀t·¬(∃s1,s2,s·(t↦s1↦s) ∈ next_pass ∧ (t↦s2↦s) ∈ next_pass ∧ s1 ≠ s2)"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="unique_first_pass" org.eventb.core.predicate="∀t· t ∈ trains ⇒ t = t"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="every_hop_has_track" org.eventb.core.predicate="∀t,s1,s2· (t↦s1↦s2) ∈ next_pass ⇒ (s1↦s2) ∈ tracks"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="every_stop_is_pass" org.eventb.core.predicate="∀t· t ∈ dom(stops) ∧ t ∈ dom(passes) ⇒ stops(t) ⊆ passes(t)"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="passes"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="first_pass"/>
+</org.eventb.core.contextFile>
