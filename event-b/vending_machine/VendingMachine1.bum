@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="VendingMachine0"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Beverages"/>
+<org.eventb.core.variable name=")" org.eventb.core.comment="The drink which is selected" org.eventb.core.identifier="drink"/>
+<org.eventb.core.variable name="*" org.eventb.core.comment="Whether you've paid or not" org.eventb.core.identifier="paid"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="insert_coin">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="insert_coin"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="select_cola">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="select_cola"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="select_fanta">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="select_fanta"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="get_cola">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="get_cola"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="get_fanta">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="get_fanta"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
