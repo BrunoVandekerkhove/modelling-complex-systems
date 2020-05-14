@@ -3,6 +3,8 @@
 idp/*
 !idp/ide/
 
+rodin/workspace/
+
 idp/ide/*
 !idp/ide/workfolder/
 
