@@ -81,8 +81,8 @@ The 4 assertions were encoded as follows :
 AG (EF (\{in\_train = TRUE\} \& not(e(hop\_off) or e(go\_to\_next))))\\
 %G (((\{in\_train = TRUE\} \& not(e(go\_to\_next))) \& not(e(hop\_off))))\\
 G (\{in\_train = TRUE\} $\Rightarrow$ ([go\_to\_next] U [hop\_off]))\\
-AF (AG ((e(hop\_on) or e(hop\_off))))\\
-AG ((\{current\_station = A\} $\Rightarrow$ not((E not(\{current\_station = C\}) U \{current\_station = F\}))))
+AF (AG ([hop\_on] or [hop\_off]))\\
+AG (\{current\_station = A\} $\Rightarrow$ not(E not(\{current\_station = C\}) U \{current\_station = F\}))
 \end{tabular}
 \end{center}
 
