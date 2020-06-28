@@ -1,0 +1,85 @@
+// author: Simon Marynissen
+
+vocabulary V_fixed {
+    type Station
+    type Train
+    type Pass isa int
+    type Stop isa int
+    type Prize isa int
+    type Age isa int
+    type TicketType constructed from { Standard, Youth, Senior }
+    type Ticket constructed from { T(TicketType, Train, Station, Station) }
+    track(Station, Station)
+    passes(Train, Station, Pass)
+    stopsAt(Train, Station, Stop)
+    hasTicket(Ticket)
+    paid(Ticket, Prize)
+    start : Station
+    end : Station
+    age : Age
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    typeOf(Ticket) : TicketType
+    trainOf(Ticket) : Train
+    startOf(Ticket) : Station
+    endOf(Ticket) : Station
+    distance(Train, Station, Station, Pass) // The type pass can be used for measuring (positive) distance
+    reachFromStart(Station)
+}
+
+theory T : V_student {
+    { // definition for getters
+        ! t[TicketType] tr[Train] s[Station] e[Station]: typeOf(T(t, tr, s, e)) = t.
+        ! t[TicketType] tr[Train] s[Station] e[Station]: trainOf(T(t, tr, s, e)) = tr.
+        ! t[TicketType] tr[Train] s[Station] e[Station]: startOf(T(t, tr, s, e)) = s.
+        ! t[TicketType] tr[Train] s[Station] e[Station]: endOf(T(t, tr, s, e)) = e.
+    }
+    { // definition for (positive) distance
+        ! t[Train] s[Station] u[Station] d[Pass]: distance(t, s, u, d) <- ? p1[Pass] p2[Pass]: passes(t, s, p1) & passes(t, u, p2) & p1 =< p2 & d = p2 - p1.
+    }
+    { // definition reach from Start
+        reachFromStart(start).
+        ! s[Station]: reachFromStart(s) <- ? t[Ticket]: hasTicket(t) & s = endOf(t) & reachFromStart(startOf(t)).
+    }
+    // can reach the End destination
+    reachFromStart(end).
+    
+    // tickets in possesion have correct stop numbers (so you can't go backwards)
+    ! t[Ticket]: hasTicket(t) => ? n[Stop] m[Stop]: stopsAt(trainOf(t),startOf(t),n) & stopsAt(trainOf(t), endOf(t), m) & n < m. 
+    
+    // passes are connected
+    ! t[Train] s[Station] u[Station] p[Pass]: passes(t, s, p) & passes(t, u, p + 1) => track(s, u).
+    
+    // a train only stops at a station it passes through
+    ! t[Train] s[Station] st[Stop]: stopsAt(t, s, st) => ? p[Pass]: passes(t, s, p).
+    
+    // only < 26 can have youth tickets
+    ! t[Ticket]: hasTicket(t) & typeOf(t) = Youth => age < 26.
+    
+    // only > 65 can have senior tickets
+    ! t[Ticket]: hasTicket(t) & typeOf(t) = Senior => age > 65.
+    
+    // at most one ticket for a single train
+    ! t1[Ticket] t2[Ticket]: hasTicket(t1) & hasTicket(t2) & trainOf(t1) = trainOf(t2) => t1 = t2.
+    
+    { // definition of paid
+        ! t[Ticket]: paid(t, 5) <- typeOf(t) = Youth & hasTicket(t).
+        ! t[Ticket]: paid(t, 6) <- typeOf(t) = Senior & hasTicket(t).
+        ! t[Ticket] d[Pass]: paid(t, 3 * d) <- typeOf(t) = Standard & hasTicket(t) & distance(trainOf(t), startOf(t), endOf(t), d).
+    }
+    
+    // stops are from 0 to end
+    ! t[Train] s[Station] st[Stop]: stopsAt(t, s, st) & st > 0 => ? u[Station]: stopsAt(t, u, st - 1).
+    
+    // passes are from 0 to end
+    ! t[Train] s[Station] p[Pass]: passes(t, s, p) & p > 0 => ? u[Station]: passes(t, u, p - 1).
+}
+
+procedure main() {
+    stdoptions.nbmodels = 5
+    printmodels(modelexpand(T, S1, V_fixed))
+}
+
+include "traintickets_structures.idp"

@@ -1,0 +1,47 @@
+vocabulary V {
+    type Time isa nat
+    Start : Time
+    partial Next(Time) : Time
+    
+    type State constructed from { Busy, Ready }
+    type Request constructed from { True, False }
+    type Event constructed from { AcceptRequest(Request), DoNotAcceptRequest(Request, State) }
+    
+    occur(Time) : Event
+    
+    state(Time) : State
+    I_state : State
+    C_state(Time, State)
+    // Cn_state(Time, State) // not needed since state is always changing.
+    
+    request(Time) : Request
+    I_request : Request
+    C_request(Time, Request)
+    // Cn_request(Time, Request) // not needed since request is always changing
+}
+
+theory T : V {
+    {
+        state(Start) = I_state.
+        ! t[Time] s[State]: state(Next(t)) = s <- C_state(t, s).
+        // ! t[Time]: state(Next(t)) = state(t) <- ~Cn_state(t, state(t)). // state is always changing
+    }
+    {
+        ! t[Time]: C_state(t, Busy) <- ? r[Request]: occur(t) = AcceptRequest(r).
+        ! t[Time] s[State]: C_state(t, s) <- ? r[Request]: occur(t) = DoNotAcceptRequest(r, s).
+        // Cn_state(t, s) is always false
+    }
+    {
+        request(Start) = I_request.
+        ! t[Time] r[Request]: request(Next(t)) <- C_request(t, r).
+        // ! t[Time]: request(Next(t)) = request(t) <- ~Cn_request(t, request(t)). // request is always changing
+    }
+    {
+        ! t[Time] r[Request]: C_request(t) = r <- occur(t) = AcceptRequest(r).
+        ! t[Time] r[Request]: C_request(t) = r <- ? s[State]: occur(t) = DoNotAcceptRequest(r, s).
+        // Cn_request(t, r) is always false
+    }
+    
+    ! t[Time] r[Request]: occur(t) = AcceptRequest(r) => request(t) = True & state(t) = Ready.
+    ! t[Time] r[Request]: occur(t) = DoNotAcceptRequest(r, s) => request(t) = False | state(t) = Busy.
+}

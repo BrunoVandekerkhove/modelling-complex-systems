@@ -1,0 +1,85 @@
+vocabulary V {
+    
+    type Time isa nat
+    partial Next(Time) : Time
+    Start : Time
+    
+    type Player
+    type Heap
+    type Matches isa int
+    
+    // Fluents
+    nb(Time, Heap, Matches) 
+    winner(Time, Player) 
+    gameOver(Time) 
+    turn(Time, Player)
+    
+    // Actions
+    takes(Time, Player, Heap, Matches)
+    
+    
+    // Frame
+    I_turn(Player)
+    CT_turn(Time,Player)
+    CF_turn(Time,Player)
+    I_nb(Heap,Matches)
+    CT_nb(Time,Heap,Matches)
+    CF_nb(Time,Heap,Matches)
+
+}
+
+theory TT : V {
+    {
+    	Start = MIN[:Time].
+        !t: Next(t) = t + 1 <- Time(t + 1).
+    }
+}
+
+structure S : V {
+    Time = {0..20}
+    Player = {Bruno; David}
+    Heap = {a;b;c;d}
+    Matches = {0..7}
+    I_turn = {Bruno}
+    I_nb = {(a,1);(b,3);(c,5);(d,7)}
+    gameOver = {15}
+}
+
+theory T : V {
+    
+    // Preconditions
+    !t,p,h,m: takes(t,p,h,m) => turn(t,p) & m > 0 & (!n: nb(t,h,n) => n >= m).
+    
+    
+    // Frame rules
+    {
+        !p: turn(0, p) <- I_turn(p).
+        !p,t: turn(Next(t), p) <- CT_turn(t,p).
+        !p,t: turn(Next(t), p) <- turn(t,p) & ~CF_turn(t,p).
+    }
+    {
+        !h,m: nb(0,h,m) <- I_nb(h,m).
+        !t,h,m: nb(Next(t),h,m) <- CT_nb(t,h,m).
+        !t,h,m: nb(Next(t),h,m) <- nb(t,h,m) & ~CF_nb(t,h,m).
+    }
+    
+    // No-concurrency + minimum 1 action
+    !t: (?h,m: m > 0 & nb(t,h,m)) => ?1p,h,x: (x > 0 & takes(t,p,h,x)).
+    
+    // Action effect rules
+    !t,p: ~turn(t,p) <=> CT_turn(t,p).
+    !t,p: turn(t,p) <=> CF_turn(t,p).
+    {
+        !t,p,h,n,m: CT_nb(t,h,n-m) <- takes(t,p,h,m) & nb(t,h,n).
+        !t,p,h,n,m,x: CF_nb(t,h,x) <- takes(t,p,h,m) & nb(t,h,n) & x ~= (n-m).
+    }
+    
+    // Definition of game over
+    !t: gameOver(t) <=> ?p,h,m: takes(t,p,h,m) & nb(t,h,m) & (!h2: h2 ~= h => nb(t,h2,0)).
+    !t,p: winner(t,p) <=> gameOver(t) & ?p2:turn(t,p2) & p2 ~= p.
+    
+}
+
+procedure main() {
+    print(onemodel(merge(T, TT), S))
+}

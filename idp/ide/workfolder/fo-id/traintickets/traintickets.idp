@@ -1,0 +1,97 @@
+// Name: Bruno
+// Last name: Vandekerkhove
+// Student number: s0216676
+
+vocabulary V_fixed {
+    type Station
+    type Train
+    type Pass isa int
+    type Stop isa int
+    type Prize isa int
+    type Age isa int
+    type TicketType constructed from { Standard, Youth, Senior }
+    type Ticket constructed from { T(TicketType, Train, Station, Station) }
+    track(Station, Station)
+    passes(Train, Station, Pass)
+    stopsAt(Train, Station, Stop)
+    hasTicket(Ticket)
+    paid(Ticket, Prize)
+    start : Station
+    end : Station
+    age : Age
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    halt(Station,Station) // Passenger halts at a station after halting at an other.
+}
+
+theory T : V_student {
+    
+    // All acquired tickets should be of the right type.
+    ~(age =< 65 & ?t,s,e: hasTicket(T(Senior,t,s,e))).
+    ~(age >= 26 & ?t,s,e: hasTicket(T(Youth,t,s,e))).
+    
+    // If a train passes by s2 right after s1 then there should 
+    //	be a corresponding track.
+    !t,s,e,p: passes(t,s,p) & passes(t,e,p+1) => track(s,e).
+
+    // The passes and stops should conform to the specification.
+    !t,e,p: passes(t,e,p) & Pass(p-1) => ?s: passes(t,s,p-1).
+    !t,e,st: stopsAt(t,e,st) & Stop(st-1) => ?s: stopsAt(t,s,st-1).
+    
+    // Each stop is a pass.
+    !t,s,st: stopsAt(t,s,st) => ?p: passes(t,s,p).
+    
+    // The price of a ticket should correspond to the specification.
+    {
+        !t,s,e:paid(T(Youth,t,s,e),5) <- hasTicket(T(Youth,t,s,e)).
+        !t,s,e:paid(T(Senior,t,s,e),6) <- hasTicket(T(Senior,t,s,e)).
+        !t,s,e,p1,p2:paid(T(Standard,t,s,e),3*abs(p2-p1)) <- 
+        	hasTicket(T(Standard,t,s,e)) & passes(t,s,p1) & passes(t,e,p2).
+    }
+    
+    // If a passenger has a ticket the very train should pass at the very stations.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) => ?a,b: stopsAt(t,s,a) & stopsAt(t,e,b) & a < b.
+    
+    // Definition of halt.
+    //	halt(s,e) holds if the passenger stops at e after stopping at s.
+    {
+		!s:halt(start,s) <- 
+        	?tt,t,e,x:hasTicket(T(tt,t,start,e)) 
+        	& stopsAt(t,start,x) 
+        	& stopsAt(t,s,x+1).
+        !p,s,n:halt(s,n) <- 
+        	halt(p,s)
+        	& ?tt,t,a,b:hasTicket(T(tt,t,a,b)) 
+        	& ?x:stopsAt(t,a,x) & ?y:stopsAt(t,b,y) & ?z:stopsAt(t,s,z) & x =< z < y
+        	& stopsAt(t,n,z+1).
+	}
+        
+    // The passenger should be able to travel to the destination.
+    ?s:halt(s,end).
+    
+    // There are no two tickets for the same train.
+    !t:?=<1tt,s,e: hasTicket(T(tt,t,s,e)).
+    
+    /* Invalid constraints commented out after clarifications in discussion board.
+    // Every station from which the passenger departs can be reached.
+    !tt,t,s,e: hasTicket(T(tt,t,s,e)) & s ~= start => ?x: halt(x,s).
+    
+    // A station is only stopped at once.
+    !s:(?<2p: halt(p,s)) & (?<2n: halt(s,n)).
+    
+    // The passenger doesn't depart from the terminal.
+    ~?s:halt(end,s).
+    */
+    
+}
+
+procedure main() {
+    iterator = modelIterator(T, S1, V_fixed);
+    for model in iterator do
+        print (model );
+    end
+}
+
+include "traintickets_structures.idp"

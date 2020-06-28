@@ -1,0 +1,61 @@
+// Name: Bruno
+// Last name: Vandekerkhove
+// Student number: s0216676
+
+vocabulary V_fixed {
+    type X isa int
+    type Y isa int
+    type Number isa int
+    type Pos constructed from { P(X, Y) }
+    land(Pos)
+    water(Pos)
+    islandSize(Pos, Number)
+}
+
+vocabulary V_student {
+    extern vocabulary V_fixed
+    connected(Pos,Pos)
+}
+
+theory T : V_student {
+    
+    // Inductive definition of connectedness.
+    // (1) every cell is connected to itself
+    // (2) two cells are connected if they are adjacent and of the same type
+    // (3) transitive closure
+    {
+        !x,y: connected(P(x,y),P(x,y)).
+        !x,y,z,w: connected(P(x,y),P(z,w)) <- 
+        	(water(P(x,y)) & water(P(z,w)) | (land(P(x,y)) & land(P(z,w))))
+        	& (abs(x-z) + abs(y-w) = 1).
+        !x,y,z: connected(x,z) <- connected(x,y) & connected(y,z). 
+    }
+   
+    // Every piece of land is part of exactly one island.
+    !p: land(p) => ?1i,n:islandSize(i,n) & connected(p,i).
+    
+    // Each island should have the right size.
+    !i,n: islandSize(i,n) => land(i) & #{p[Pos]: connected(i,p)} = n.
+    
+    // A position cannot have multiple numbers (specifying island sizes).
+    !p:?=<1s: islandSize(p,s).
+    
+    // Everything is either land or water.
+    !p: land(p) <=> ~water(p).
+    
+    // A sea cannot contain a 2x2 square.
+    ~?x,y: water(P(x,y)) & water(P(x+1,y)) & water(P(x,y+1)) & water(P(x+1,y+1)).
+        
+    // All water is part of the sea.
+    ~?p1,p2: water(p1) & water(p2) & ~connected(p1,p2).
+    
+}
+
+procedure main() {
+    model = onemodel(T, S1, V_fixed)
+    initVisualization()
+    visualizeNurikabe(model)
+}
+
+include "visualize_nurikabe.idp"
+include "nurikabe_structures.idp"
